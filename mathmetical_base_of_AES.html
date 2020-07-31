@@ -1,33 +1,33 @@
-<html lang="kr">
+<html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mathmetical base of AES</title>
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
-  
-    MathJax.Hub.Config({
-      extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
-      jax: ["input/TeX", "output/HTML-CSS"],
-      displayAlign: "left",  
-      tex2jax: {
-        inlineMath: [['$', '$'], ["\\(", "\\)"]],
-        displayMath: [['$$', '$$'], ["\\[", "\\]"]],
-      },
-      "HTML-CSS": { 
-        availableFonts: ["TeX"],
-        styles: {
-          ".MathJax_Display" : {
-            margin: "0"          
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        displayAlign: "left",
+        tex2jax: {
+          inlineMath: [['$', '$'], ["\\(", "\\)"]],
+          displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+        },
+        "HTML-CSS": {
+          availableFonts: ["TeX"],
+          styles: {
+            ".mjx-chtml.MJXc-display": {
+              margin: "0",
+            }
           }
         }
-      }
-    });
-  </script>
+      });
+    </script>
+
+  <link rel="stylesheet" href="index.css">
 
 </head>
-
-<link rel="stylesheet" href="index.css">
 
 <body id="body">
   <div id="header">
