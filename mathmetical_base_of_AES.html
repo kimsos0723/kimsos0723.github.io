@@ -1,0 +1,148 @@
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathmetical base of AES</title>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      displayAlign: "left",  
+      tex2jax: {
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+      },
+      "HTML-CSS": { 
+        availableFonts: ["TeX"],
+        styles: {
+          ".MathJax_Display" : {
+            margin: "0"          
+          }
+        }
+      }
+    });
+  </script>
+
+</head>
+
+<link rel="stylesheet" href="index.css">
+
+<body id="body">
+  <div id="header">
+    <h3 class="title">Xylitol</h3>
+  </div>
+
+  <div id="content">
+    <div id="side_bar">
+      <img class="photo" , src="profile.jpg" , alt="profile"> </a>
+      <div class="menu">
+        <p class="category">C / C++</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Design pattern</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Network</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">OS(Linux)</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Security</p>
+        <div class="category_container menu">
+          <a href="mathmetical_base_of_AES.html">Mathmetical base of AES</a>
+        </div>
+      </div>
+      <div class="menu drop">
+        <p class="category">misc</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <ul>
+        <li>AES<br>Advanced Encryption Standard<br>ref : <a
+            href="https://www.youtube.com/watch?v=x1v2tX4_dkQ&amp;t=3682s">Galois Field lecture</a>
+          <ul>
+            <li>Galois Field(Finite Field) <br>F.F(Finite Field) is exist with $$P^m$$<ul>
+                <li><i>p: prime number m</i><br><i>m: integer</i><br>GF: Galois Field<br></li>
+                <li>Example<ul>
+                    <li>There is a F.F. with 11 element : $$GF(11)$$</li>
+                    <li>There is a F.F. with 81 element : $$GF(89) = GF(3^4)$$ </li>
+                    <li>There is a F.F. with 256 element : $$GF(256) = GF(2^8)$$<br>(Rem AES Field)</li>
+                    <li>There is not a F.F 12 with 12 element $$12 = 2^2 \cdot 3$$</li>
+                  </ul>
+                </li>
+                <li>Prime Field Arithmetic<br>$$GF(P^1)$$ <ul>
+                    <li>$$GF(P) = \{ 0,1 ..., P-1 \}$$</li>
+                    <li>Add, Subtract, Multiply<ul>
+                        <li>$$ let \, a,b \in GF(p) = \{ 0,1,...,p-1 \}$$ <br>$$a+b \equiv c \mod q$$<br>$$a-b \equiv d
+                          \mod
+                          q$$<br>$$a\cdot b \equiv e \mod q$$</li>
+                      </ul>
+                    </li>
+                    <li>Inversion<ul>
+                        <li>$$ a \in GF(p)$$<br>the inversion $$a \cdot a^{-1} \equiv 1$$ </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Extension Field<br>$$GF(P^m) $$ $$ (m &gt; 1)$$<br>but AES is m = 8<ul>
+                    <li>Element Representation<ul>
+                        <li>The elements of $$GF(2^m)$$ are polynomials<br>$$a_{m-1}x^{m-1} + ... + a_{1}x+a_0 = A(x)
+                          \in
+                          GF(2^m)$$<br>important : $$a_i \in GF(2) = \{0, 1\}$$<ul>
+                            <li>$$GF(2^3) = GF(8)$$<br>$$A(x) = a_2x^2 + a_1x + a_0 = (a_2,a_1,
+                              a_0)$$<br>$$GF(2^3)$$<br>$$
+                              = \{ 0, 1, x, x+1, x^2, x^2, x^2 + 1, x^2 + x, x^2 +x+1 \}$$</li>
+                          </ul>
+                        </li>
+                        <li>Addition and Subtraction<br>use regular polynomial <br>add or subtraction, where the
+                          coefficients are compute in GF(2)<ul>
+                            <li>ex) $$GF(2^3)$$<br>$$A(x) = x^2 + x + 1$$<br>$$B(x) = x^2 \qquad+ 1
+                              $$<br>---------------------------------<br>$$A+B = (1+1)x^2 + (1+1)$$<br> $$ = x $$</li>
+                          </ul>
+                        </li>
+                        <li>Multiplication <br>!<a
+                            href="https://t1.daumcdn.net/cfile/tistory/137E4648507E13A031">img</a>
+                          <ul>
+                            <li>Intuition: Just do regular polynomial multiplication.<ul>
+                                <li>ex) $$GF(2^3)$$<br>$$P(x) = x^3 + x + 1$$<br>$$A \cdot B = (x^2+x+1)(x^2 +
+                                  1)$$<br>$$=
+                                  x^4 + x^3 + x^2 + x^2 +x + 1 $$<br>$$= x^4 + x^3 (1+1)x^2 +x +1 $$<br>$$\neq x^4 + x^3
+                                  + x
+                                  + 1 = C'(x) $$ <br>$$\because x^4 + x^3 + x + 1 \notin GF(2^3)$$<br>solution : reduce
+                                  $$C'(x)$$ modulo polynomial <br>that "behaves like a prime"<br> thes are called
+                                  irreducible polynomial</li>
+                                <li>ex2) $$( x^4 + x^3 + x + 1) \div (x^3+x+1) = x+1 $$<br>$$\equiv x^2 + x \equiv A
+                                  \cdot B
+                                  \mod P(x)$$</li>
+                                <li>AES Irreducible polynomial <br>$$P(x) = x^8 + x^4 + x^3 + x +1$$</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>AES</li>
+            <li>Consist of Layers<ul>
+                <li>ByteSub(stitution) &lt;- provides confusion</li>
+                <li>ShiftRow<br>MixCol(umn) </li>
+                <li>KeyAdd </li>
+                <li>last round does not have MixCol Layer</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
