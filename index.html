@@ -4,24 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SeongWook Kim</title>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      displayAlign: "left",
+      tex2jax: {
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+  </script>
+
 </head>
 
-<!-- <link rel="stylesheet" href="https://kimsos0723.github.io/index.css"> -->
+<link rel="stylesheet" href="mathjax.css">
 <link rel="stylesheet" href="index.css">
 
-<body id="body">  
-  <div id="header"> 
+<body id="body">
+  <div id="header">
     <h3 class="title">Xylitol</h3>
   </div>
 
   <div id="content">
-    <div id="side_bar">      
-      <a class="menu" href="https://kimsos0723.github.io/what.html">Who am i?</a>
-    </div>
+    <div id="side_bar">
+      <img class="photo" , src="profile.jpg" , alt="profile"> </a>
+      <div class="menu">
+        <p class="category">C / C++</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Design pattern</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Network</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">OS(Linux)</p>
+      </div>
+      <div class="menu drop">
+        <p class="category">Security</p>
+        <div class="category_container menu">
+          <a href="mathmetical_base_of_AES.html">Mathmetical base of AES</a>
+        </div>
+      </div>
+      <div class="menu drop">
+        <p class="category">misc</p>
+      </div>
+  </div>
 
     <div class="post">
-      Hello my name is SeongWook Kim(김성욱) 
-      
+      <pre>
+Hello my name is SeongWook Kim(김성욱)
+This blog posts what I'm interested in or researched.
+I wrote in english, but i'm not native english man so my english can be broken, plz forgive me
+I try to code <a href="https://suckless.org/">suckless</a> but i don't know i successed 
+
+      </pre>
+
+      <br>
+      <h4>Interesting things</h4>
+      <li>Algorithm</li>
+      <li>C / C++</li>
+      <li>Design pattern</li>
+      <li>Network</li>
+      <li>OS(Linux)</li>
+      <li>Security</li>
+      <li>misc</li>
+
     </div>
 
   </div>
