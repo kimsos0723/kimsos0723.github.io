@@ -19,6 +19,12 @@ body {
   padding-left: 1.5vw;
   max-height: 10rem;  
   font-size: 3vmin;
+  
+}
+
+#header .title a {
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -110,7 +116,3 @@ body {
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
