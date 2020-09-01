@@ -1,0 +1,55 @@
+#wrap_content {
+    max-width: 900px;
+}
+
+.inner_content {
+    margin-bottom: 20px;
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.inner_content:hover {
+    background-color: gainsboro;    
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.content_thumb {
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.content_thumb strong {
+    font-size: 18px;
+    line-height: 32px;
+    display: -webkit-box;    
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;  
+    -webkit-box-orient: vertical;
+}
+
+.content_thumb p {
+    font-size: 14px;
+    color: gray;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;  
+    -webkit-box-orient: vertical;
+}
+
+.thumb_img {    
+    width: 200px;
+    max-height: 500px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    
+
