@@ -18,7 +18,7 @@ let posts_json = `[
         "thumb_content": "This post is organizing toughts of mathmetical base of AES, I refer to Youtube Video that 'Lecture 7: Introduction to Galois Fields for the AES by Christof Paar'. This videos very kindly explain for newbies",
         "thumb_img": "image/aes.png",
         "path": "mathmetical_base_of_AES.html"
-    }
+    }    
 ]`
 
 let jsonToElements = function (){
@@ -28,7 +28,9 @@ let jsonToElements = function (){
     for(let i = 0; i < posts.length; i++){
         let innerContent = document.createElement("div");        
         innerContent.className = "inner_content";
-        // innerContent.onclick = location.href = posts[i].path;
+        innerContent.addEventListener("click", function() {
+            location.href = posts[i].path;
+        });
         
         let thumbImg = document.createElement("div");
         thumbImg.className = "thumb_img";
