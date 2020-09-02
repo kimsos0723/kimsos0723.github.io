@@ -1,10 +1,12 @@
 #wrap_content {
     max-width: 900px;
+
 }
 
 .inner_content {
-    margin-bottom: 20px;
-    padding: 0px 10px 0px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    padding: 13px 10px 13px 10px;
     text-decoration: none;
     display: flex;
     flex-direction: row-reverse;
