@@ -1,0 +1,29 @@
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
+title:          Xylitol
+paginate:       5
+baseurl:        ''
+url:            "https://kimsos0723.github.io"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+include:        
+        - _pages
+
+# About
+author:
+  name:         SeongWook Kim
+  email:        kimsos0723@gmail.com
+
+# Gems -> plugins
+plugins:
+  - jekyll-paginate 
+  - jekyll-seo-tag
+  - jekyll-feed
