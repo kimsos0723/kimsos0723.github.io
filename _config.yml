@@ -3,7 +3,7 @@ permalink:      /:year-:month-:day/:title
 
 # Setup
 title:          Xylitol
-paginate:       5
+paginate:       4
 baseurl:        ''
 url:            "https://kimsos0723.github.io"
 
@@ -16,7 +16,6 @@ sass:
 markdown:       kramdown
 highlighter:    rouge
 lsi:            false
-excerpt_separator: "\n\n"
 incremental:    false
 
 include:        
