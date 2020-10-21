@@ -20,10 +20,14 @@ include:
 # About
 author:
   name:         SeongWook Kim
-  email:        kimsos0723@gmail.com
+  email:        kimsos0723@gmail.com 
+
+# Disqus
+disqus: blog-m0eppdqvus
 
 # Gems -> plugins
 plugins:
   - jekyll-paginate 
   - jekyll-seo-tag
   - jekyll-feed
+
