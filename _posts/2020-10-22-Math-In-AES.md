@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AES in math"
+title: "Math in AES"
 author: "Seongwook Kim"
 tags: AES, Encrypt, crypto
 comments: true
@@ -60,7 +60,7 @@ $ = x $
 **Multiply**
 ![img](https://t1.daumcdn.net/cfile/tistory/137E4648507E13A031)
 Intuition: Just do   regular polynomial multiplication.
-ex) $GF(2^3)$\
+$GF(2^3)$\
 $P(x) = x^3 + x + 1$\
 $A \cdot B = (x^2+x+1)(x^2 + 1)$\
 $= x^4 + x^3 + x^2 + x^2 +x + 1 $\
@@ -69,7 +69,7 @@ $\neq x^4 + x^3 + x + 1 = C'(x) $\
 $\because x^4 + x^3 + x + 1  \notin GF(2^3)$\
 solution : reduce $$C'(x)$$ modulo polynomial 
 that "behaves like a prime" thes are called irreducible polynomial\
-ex2) $( x^4 + x^3 + x + 1) \div (x^3+x+1) = x+1 $\
+$( x^4 + x^3 + x + 1) \div (x^3+x+1) = x+1 $\
 $\equiv  x^2 + x \equiv A \cdot B \mod P(x)$\
 AES Irreducible polynomial 
 $P(x) = x^8 + x^4 + x^3 + x +1$
