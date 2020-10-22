@@ -29,6 +29,9 @@ author:
 # Disqus
 disqus: blog-m0eppdqvus
 
+# Google Analytics
+google_analytics: UA-181065884-1
+
 # Gems -> plugins
 plugins:
   - jekyll-paginate 
