@@ -45,7 +45,7 @@ but AES use $m = 8$
 $GF(2^3) = GF(8)$\
 $A(x) = a_2x^2 + a_1x + a_0 = (a_2,a_1, a_0)$\
 $GF(2^3)$\
-$ = \{ 0, 1, x, x+1, x^2, x^2, x^2 + 1, x^2 + x, x^2 +x+1 \}$\
+$ = \{ 0, 1, x, x+1, x^2, x^2 + 1, x^2 + x, x^2 + x + 1 \}$\
 Addition and Subtraction\
 use regular polynomial
 add or subtraction, where the coefficients are compute in GF(2)
@@ -54,7 +54,7 @@ $GF(2^3)$\
 $A(x) = x^2 + x + 1$\
 $B(x) = x^2 \qquad+ 1 $\
 -------------------------------\
-$ =  (1+1)x^2 + (1+1)$\
+$ =  (1+1)x^2 + x + (1+1)$\
 $ = x $
 
 **Multiply**
