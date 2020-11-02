@@ -2,7 +2,7 @@
 layout: post
 title: "Python Decorator in C"
 author: "Seongwook Kim"
-tags: Language, C, Chill
+tags: Language, C, Chill, C framework, C trick
 comments: true
 use_math: true
 ---
@@ -23,9 +23,9 @@ def decorator(func):
 	return wrapper
 
 
-@decorate
-	def say_byte():
-		print("bye")
+@decorator
+def say_byte():
+	print("bye")
 ~~~
 
 ## Imitate Decorator in c

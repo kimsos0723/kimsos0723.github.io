@@ -2,7 +2,7 @@
 layout: post
 title: "Math in AES"
 author: "Seongwook Kim"
-tags: AES, Encrypt, crypto
+tags: AES, Encrypt, crypto, Finite Field, Galois Field
 comments: true
 use_math: true
 ---
